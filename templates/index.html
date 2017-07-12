@@ -1,9 +1,21 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>8K LINKS</title>
+        <title>8k links</title>
+        <link rel="stylesheet" type="text/css" href="/static/css/styles.css">
     </head>
     <body>
-        
+        <div class="container">
+            <div class="banner">8k Links</div>
+            <ul>
+                <li><a href="https://www.sec.gov/Archives/edgar/data/114424/0001144204-09-046037-index.htm">https://www.sec.gov/Archives/edgar/data/114424/0001144204-09-046037-index.htm</a></li>
+                <li><a href="https://www.sec.gov/Archives/edgar/data/136848/0001036848-09-000016-index.htm">https://www.sec.gov/Archives/edgar/data/136848/0001036848-09-000016-index.htm</a></li>
+                <li><a href="https://www.sec.gov/Archives/edgar/data/114424/0001144204-09-046037-index.htm">https://www.sec.gov/Archives/edgar/data/114424/0001144204-09-046037-index.htm</a></li>
+                <li><a href="https://www.sec.gov/Archives/edgar/data/136848/0001036848-09-000016-index.htm">https://www.sec.gov/Archives/edgar/data/136848/0001036848-09-000016-index.htm</a></li>
+                {% for link in links %}
+                    <li><a href="{{link[0]}}" class="{{checked}}">{{link[0]}}</a></li>
+                {% endfor %}
+            </ul>
+        </div>
     </body>
 </html>
